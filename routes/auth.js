@@ -19,8 +19,8 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ message: 'Las preferencias deben contener listas válidas' });
     }
 
-    if (typeof edad !== 'number' || edad < 13) {
-      return res.status(400).json({ message: 'La edad debe ser mayor o igual a 13' });
+    if ( edad < 10) {
+      return res.status(400).json({ message: 'La edad debe ser mayor o igual a 10' });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
